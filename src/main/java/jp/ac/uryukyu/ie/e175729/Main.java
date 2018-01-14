@@ -1,7 +1,5 @@
 package jp.ac.uryukyu.ie.e175729;
 import java.util.Scanner;
-import java.nio.file.*;
-import java.io.*;
 public class Main {
     public static
     void main(String[] args) {
@@ -22,6 +20,8 @@ public class Main {
             int order = (int) Math.random() * 2 + 1;
             System.out.printf("%dターン目開始！\n", turn);
             System.out.printf(hero.getName() + "の" + input + "!");
+
+            //それぞれのgetSpeedを比較し攻撃する順番を決定
             if (hero.getSpeed() > rival.getSpeed()) {
                 Instruction(input);
                 rival.attack(hero);
@@ -43,6 +43,8 @@ public class Main {
 
     }
     }
+
+    //入力文と対応する技を探し、一致したらPerformanceクラスから引き出す。
     public static void Instruction(String input) {
 
         Hero hero = new Hero("ピカチュウ", 100, 100,100,100,100,100);

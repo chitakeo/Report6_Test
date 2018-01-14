@@ -1,5 +1,7 @@
 package jp.ac.uryukyu.ie.e175729;
 
+//技を登録する場所。ここから技を呼び出す。
+
 public class Performance {
 
 

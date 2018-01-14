@@ -1,5 +1,6 @@
 package jp.ac.uryukyu.ie.e175729;
 
+//特攻、特防、素早さを新たに登録
 public class Status {private String name;
     private double hitPoint;
     private double attack;

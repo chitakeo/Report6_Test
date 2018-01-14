@@ -1,5 +1,6 @@
 package jp.ac.uryukyu.ie.e175729;
 
+
 public class Rival extends Status{
     public Rival(String name, double maximumHP, double attack, double defence,double special_attack ,double special_defence,double speed) {
         super(name, maximumHP, attack,defence,special_attack,special_defence,speed);
@@ -30,6 +31,7 @@ public class Rival extends Status{
     @Override
     public void wounded(double damage) {
         int probability = (int)(Math.random() * 10000+1);
+        //ポケモンバトルの要素である急所を実装。急所に当たる確率は1/16(=6.26%)
         if (probability < 626){
             damage = damage*1.5;
             System.out.print( "きゅうしょにあたった!");
