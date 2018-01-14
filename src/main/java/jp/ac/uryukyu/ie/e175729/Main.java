@@ -42,13 +42,13 @@ public class Main {
     }
 
     }
-    }
+    System.out.print("戦闘終了");}
 
     //入力文と対応する技を探し、一致したらPerformanceクラスから引き出す。
     public static void Instruction(String input) {
 
-        Hero hero = new Hero("ピカチュウ", 100, 100,100,100,100,100);
-        Rival rival = new Rival("オルゴデミーラ", 100,100,100,100,100,100);
+        Hero hero = new Hero("ピカチュウ", 142, 107,92,102,102,142);
+        Rival rival = new Rival("スライム", 248,56,55,100,100,140);
         Performance performance = new Performance();
         if (input.equals("しっぽをふる") == true) {
             performance.Tail_Whip(rival);

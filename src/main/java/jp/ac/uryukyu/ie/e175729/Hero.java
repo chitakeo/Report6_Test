@@ -14,7 +14,7 @@ public class Hero extends Status{
         if (getHitPoint() <= 0) {
             setDead(true);
 
-            System.out.printf("モンスター%sは倒れた。", getName());
+            System.out.printf("%sはたおれた。めのまえがまっくらになった！", getName());
         }
     }
 }

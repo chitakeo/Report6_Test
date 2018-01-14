@@ -31,7 +31,7 @@ public class Status {private String name;
 
     public void wounded(double damage){
         hitPoint -= damage;
-        if( hitPoint < 0 ) {
+        if( hitPoint <= 0 ) {
             dead = true;
             System.out.printf("%sは倒れた!\n", name);
         }
@@ -60,4 +60,5 @@ public class Status {private String name;
     public void setDead(boolean dead){
         this.dead = dead;
     }
+    public boolean getDead(){return dead;}
 }
