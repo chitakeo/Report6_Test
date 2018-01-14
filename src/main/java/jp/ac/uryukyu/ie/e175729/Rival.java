@@ -29,6 +29,12 @@ public class Rival extends Status{
 
     @Override
     public void wounded(double damage) {
+        int probability = (int)(Math.random() * 10000+1);
+        if (probability < 626){
+            damage = damage*1.5;
+            System.out.print( "きゅうしょにあたった!");
+        }
+        System.out.print(getName()+"に"+damage+"のダメージ！");
         setHitPoint(getHitPoint() - damage);
         if (getHitPoint() <= 0) {
             setDead(true);
@@ -36,8 +42,5 @@ public class Rival extends Status{
             System.out.printf("モンスター%sは倒れた。", getName());
         }
     }
-    public void Tail_Whip() {
-        setSpeed(getDefense() * 0.67);
-        System.out.println(getName() + "のぼうぎょが一段階下がった！");
-    }
+
 }
