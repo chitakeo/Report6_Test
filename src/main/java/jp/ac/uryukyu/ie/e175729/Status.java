@@ -18,6 +18,7 @@ public class Status {private String name;
         this.special_attack = special_attack;
         this.special_defence = special_defence;
         dead = false;
+        paralysis = false;
     }
     public boolean isDead() {
         return dead;
@@ -60,6 +61,6 @@ public class Status {private String name;
     public void setDead(boolean dead){
         this.dead = dead;
     }
-    //public void setParalysis(boolean paralysis)
+    public void setParalysis(boolean paralysis){this.paralysis = paralysis;}
 
     }
