@@ -9,7 +9,7 @@ public class Status {private String name;
     private double special_defence;
     private double speed;
     private boolean dead;
-
+    private boolean paralysis;
     public Status (String name, double maximumHP, double attack, double defense ,double special_attack ,double special_defence,double speed) {
         this.name = name;
         hitPoint = maximumHP;
@@ -27,7 +27,7 @@ public class Status {private String name;
         return name;
     }
 
-
+    public boolean isParalysis(){return paralysis; }
 
     public void wounded(double damage){
         hitPoint -= damage;
@@ -60,5 +60,6 @@ public class Status {private String name;
     public void setDead(boolean dead){
         this.dead = dead;
     }
-    public boolean getDead(){return dead;}
-}
+    //public void setParalysis(boolean paralysis)
+
+    }

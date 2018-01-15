@@ -32,12 +32,13 @@ public class Rival extends Status{
     public void wounded(double damage) {
         int probability = (int)(Math.random() * 10000+1);
         //ポケモンバトルの要素である急所を実装。急所に当たる確率は1/16(=6.26%)
-        /**if (probability < 626){
+        if (probability < 626){
             damage = damage*1.5;
             System.out.print( "きゅうしょにあたった!");
-        }*/
-        System.out.print(getName()+"に"+damage+"のダメージ！");
+        }
         setHitPoint(getHitPoint() - damage);
+        System.out.print(getName()+"に"+(int)damage+"のダメージ！\n");
+
         if (getHitPoint() <= 0) {
             setDead(true);
 

@@ -9,7 +9,7 @@ public class Performance {
         opponent.setDefense(opponent.getDefense() * 0.67);
         System.out.println(opponent.getName() + "のぼうぎょが一段階下がった！");
     }
-    public void Thundershock(Hero attacker ,Rival opponent){
+    public void Thundershock(Status attacker ,Status opponent){
         double damage = (22*attacker.getSpecial_Attack()*40/opponent.getSpecial_defence()/50+2)*((Math.random()*0.25)+0.85);
         opponent.wounded(damage);
     }
@@ -31,7 +31,7 @@ public class Performance {
         opponent.wounded(damege);
         attacker.wounded(recoil);
     }
-    public void Catastropika(Hero attacker , Rival opponent){
+    public void Catastropika(Status attacker , Status opponent){
         double damege = (22*attacker.getAttack()*210/opponent.getDefense()/50+2)*((Math.random()*0.25)+0.85);
         opponent.wounded(damege);
     }
